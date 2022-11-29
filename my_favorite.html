@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://meyerweb.com/eric/tools/css/reset/reset.css"
+    />
+    <link rel="stylesheet" href="./my_favorite.css" />
+    <title>My Favorite</title>
+  </head>
+  <body>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">
+          <img class="nav_logo" src="./resources/tree.png" alt="" srcset="" />
+        </a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+          ><i class="material-icons brown-text">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a class="brown-text menu-item" href="./about.html">About</a>
+          </li>
+          <li>
+            <a class="brown-text menu-item" href="./services.html">Services</a>
+          </li>
+      </div>
+    </nav>
+    <section id="main">
+      <h1 class="title">My Favorite Sport</h1>
+      <img
+        id="image"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Muay_Thai_Fight_Us_Vs_Burma_%2880668065%29.jpeg/1920px-Muay_Thai_Fight_Us_Vs_Burma_%2880668065%29.jpeg"
+        alt="Muay Thai"
+      />
+    </section>
+
+    <section>
+      <p id="wikipedia">Wikipedia says:</p>
+      <blockquote class="blockquote">
+        Muay Thai is often a fighting art of attrition, where opponents exchange
+        blows with one another. As well as being a practical fighting technique
+        for use in actual warfare, muay became a sport in which the opponents
+        fought in front of spectators who went to watch for entertainment.
+      </blockquote>
+      <a
+        href="https://en.wikipedia.org/wiki/Muay_Thai"
+        id="tribute-link"
+        target="_blank"
+        >Learn More</a
+      >
+      <div id="tribute-info">
+        <h2 class="listTitle">
+          Why This is My Favorite Sport:
+          <ul class="list">
+            <li>The art of 8 limbs</li>
+            <li>Considered one of the most brutal combat sports</li>
+            <li>Cultural and historical significance</li>
+          </ul>
+        </h2>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    >
+        (function ($) {
+        $(function () {
+          $(".sidenav").sidenav();
+          $(".parallax").parallax();
+
+          $(".menu-item").on("click", (event) => {
+            if ($(".selected-menu-item").length) {
+              $($(".selected-menu-item")[0]).removeClass("selected-menu-item");
+            }
+
+            $(event.target).addClass("selected-menu-item");
+          });
+        }); // end of document ready
+      })(jQuery); // end of jQuery name space
+    </script>
+  </body>
+</html>
